@@ -2,4 +2,6 @@ var name;
 
 name = "John Doe";
 
-print(name);
+console.log(name);
+
+//hello wolrd
