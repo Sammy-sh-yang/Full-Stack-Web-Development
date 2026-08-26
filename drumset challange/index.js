@@ -3,8 +3,7 @@ var drumButtons = document.querySelectorAll(".drum");
 
 for (var i = 0; i < drumButtons.length; i++) {
     drumButtons[i].addEventListener("click", function() {
-    debugger;
-        switch (this.innerText) {
+    switch (this.innerText) {
             case 'w':
         alert("this is w");
         break;
