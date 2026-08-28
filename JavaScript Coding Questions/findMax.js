@@ -5,21 +5,19 @@
 
 function maxNum (arr) {
 
-    debugger;
     var max = arr[0];
     for (var i = 1; i < arr.length; i++){
-        if (arr[0] < arr[i]){
+        if (max < arr[i]){
             max = arr[i];
-        }else {
-            max = arr[0];
         }
-
     }
 
     return max;
 
 }
 
-var array = [1,2,3,100,4,5]
+var array1 = [1,2,3,200,4,5]
+var array2 = [99, 5, 3, 100, 1]
 
-console.log(maxNum(array));
+console.log(maxNum(array1));
+console.log(maxNum(array2));
