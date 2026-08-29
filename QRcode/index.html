@@ -4,14 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css"/>
     <!-- v1.5.1 https://cdnjs.com/libraries/qrcode/1.5.1 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode/1.5.1/qrcode.js" integrity="sha512-hAz8pxm1kva4chZWPXQhGehvvlIj1Loka653sQXoYHNj4sgSukoR3ZKyHEOT7kFGVW17wUqD9CbKeviIJ2XFKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+
+    <!-- TODO: 
+     Color
+     Size 
+     Damage Level 
+     Background color
+     Foreground color
+     
+     -->
     <h1>QR Code Generator</h1>
+    Input url: 
     <input type="text" id="qrCodeInput"> 
     <button type="button" id="qrCodeGenerator"> Generate QR Code </button> <br>
+    
+    
+    <div>
+        Level:   
+        <select > 
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </div>
+    <hr>
+
+    <div>
+        <input 
+            type="color" 
+            id="foreground" 
+            name="foreground" 
+            value="#000000" />
+        <label> Foreground color </label>
+    </div>
+
+    <div>
+        <input
+            type="color"
+            id="background"
+            name="background"
+            value="#ffffff"
+            colorspace="display-p3" />
+        <label for="background">Background color</label>
+    </div>
+
+
     <img id="qrCodeImg">
 
     <script src="./qrcode.js"></script>
