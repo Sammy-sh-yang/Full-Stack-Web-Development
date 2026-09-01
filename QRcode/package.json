@@ -1,0 +1,16 @@
+{
+  "name": "qrcode",
+  "version": "1.0.0",
+  "description": "Learn how to install qrcode into html",
+  "license": "ISC",
+  "author": "Sammy Yang",
+  "type": "module",
+  "main": "qrcode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "qr-image": "^3.2.0"
+  },
+  "devDependencies": {}
+}
