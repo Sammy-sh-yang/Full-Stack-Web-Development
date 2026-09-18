@@ -1,26 +1,28 @@
 import express from "express"; 
 
-const app = express();
-const port =3000; 
+const app = express()
+const port = 3000
 
 app.get('/', (req, res) => {
-    const today = new Date();
-    let day = today.getDay();
 
-    let type = "Weekday";
-    let dataType = "Time to work hard!";
+    const today = new Date();
+    const day = today.getDay();
+
+    let wDays = "Weekdays";
+    let msg = "Let's work harder!";
 
 
     if (day === 0 || day === 6){
-    type = "Weekend";
-    dataType = "Let's have some fun!";
-    }
+        wDays = "Weekends";
+        msg = "Let's play!!";
+         }
 
-    res.render('index.ejs',{
-        dayType:type,
-        dataType:dataType,
-    })
-    })
+  res.render('index.ejs',{
+    dayType: wDays,
+    advise: msg,
+  });
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
